@@ -25,12 +25,7 @@ class ResponseSerializerUtil {
     createListItems(data, resource) {
         const items = [];
         data.forEach(function (item) {
-            items.push({
-                data: item,
-                meta: {
-                    type: resource,
-                }
-            });
+            items.push(item);
         });
         return items;
     }

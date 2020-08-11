@@ -7,6 +7,7 @@ const HttpStatus = require('http-status-codes');
 const Swagger = require('./configuration/initSwagger');
 const Routes = require('./configuration/initRoutes');
 const Server = require('./configuration/initServer');
+const Events = require('./configuration/initEvents');
 const xssFilter = require('x-xss-protection');
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
@@ -56,8 +57,11 @@ Swagger.initSwagger(app);
 console.log('=>> Step: Init routes');
 Routes.initRoutes(app);
 
-console.log('=>> Step: Connection database');
-MySQLConnection.getSequelizeInstance().getConnectStatus();
+// console.log('=>> Step: Connection database');
+// MySQLConnection.getSequelizeInstance().getConnectStatus();
+
+console.log('=>> Step: Init events');
+Events.initEvents();
 
 console.log('=>> Step: Create server');
 Server.create(app);

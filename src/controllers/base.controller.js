@@ -7,6 +7,7 @@ class BaseController {
             const response = this.formatResponse(results, resource);
             res.status(httpStatusCode).send(response);
         } catch (err) {
+            console.log(err);
             if (err.code === 'ER_ROW_IS_REFERENCED_2') {
                 next(ErrorCode.SYSTEM_SETTINGS.SYSTEM_SETTINGS_VALIDATION_FAILED);
             } else {
