@@ -24,3 +24,7 @@ exports.MISSING_FIRSTNAME_FIELD = 'Missing_FirstName_Field';
 exports.MISSING_LASTNAME_FIELD = 'Missing_LastName_Field';
 exports.MISSING_REFRESH_TOKEN_FIELD = 'Missing_Refresh_Token_Field';
 
+//------Docker------//
+exports.START_CONTAINER_REMOVED= 'Start_Container_Removed';
+exports.CAN_NOT_REMOVE_CONTAINER_IS_RUNNING= 'Can_Not_Remove_Container_Is_Running';
+
